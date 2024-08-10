@@ -1,10 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:notes/Views/widgets/custom_text_field.dart';
 
 class AddNoteBottomSheet extends StatelessWidget {
   const AddNoteBottomSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        children: [
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            'Add New Note',
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          CustomTextField()
+        ],
+      ),
+    );
   }
 }
