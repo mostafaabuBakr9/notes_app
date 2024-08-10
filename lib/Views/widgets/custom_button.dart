@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
-
+  CustomButton({super.key, required this.text});
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget {
           color: Colors.blueAccent, borderRadius: BorderRadius.circular(8)),
       child: Center(
         child: Text(
-          'Save',
+          text,
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),
