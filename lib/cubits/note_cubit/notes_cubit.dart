@@ -10,10 +10,11 @@ part 'notes_state.dart';
 class NotesCubit extends Cubit<NotesState> {
   NotesCubit() : super(NotesInital());
 
-  dynamic ? notes;
+  dynamic? notes;
   var notesBox = Hive.box<dynamic>(kNotesBox);
 
   fetchAllNotes() async {
     notes = notesBox.values.toList();
+    emit(NotesSuccess());
   }
 }
