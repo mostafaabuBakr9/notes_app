@@ -29,7 +29,9 @@ class CustomNoteItem extends StatelessWidget {
               ),
               subtitle: Text(note.subtile, style: TextStyle(fontSize: 20)),
               trailing: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    note.delete();
+                  },
                   icon: Icon(
                     FontAwesomeIcons.trash,
                     // Icons.delete,
