@@ -6,7 +6,7 @@ import 'package:notes/Views/edit_notes_view.dart';
 import 'package:notes/cubits/note_cubit/notes_cubit.dart';
 
 class CustomNoteItem extends StatelessWidget {
-  CustomNoteItem({super.key, required this.note});
+  const CustomNoteItem({super.key, required this.note});
   final NoteModel note;
   @override
   Widget build(BuildContext context) {
@@ -29,15 +29,15 @@ class CustomNoteItem extends StatelessWidget {
             ListTile(
               title: Text(
                 note.title,
-                style: TextStyle(fontSize: 26),
+                style: const TextStyle(fontSize: 26),
               ),
-              subtitle: Text(note.subtile, style: TextStyle(fontSize: 20)),
+              subtitle: Text(note.subtile, style: const TextStyle(fontSize: 20)),
               trailing: IconButton(
                   onPressed: () {
                     note.delete();
                     BlocProvider.of<NotesCubit>(context).fetchAllNotes();
                   },
-                  icon: Icon(
+                  icon: const Icon(
                     FontAwesomeIcons.trash,
                     // Icons.delete,
                     color: Colors.black,
@@ -46,7 +46,7 @@ class CustomNoteItem extends StatelessWidget {
             ),
             Text(
               note.date,
-              style: TextStyle(color: Colors.black, fontSize: 15),
+              style: const TextStyle(color: Colors.black, fontSize: 15),
             )
           ],
         ),

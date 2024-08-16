@@ -26,14 +26,14 @@ class _AddNoteFormState extends State<AddNoteForm> {
       autovalidateMode: autovalidateMode,
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Text(
+          const Text(
             'Add New Note',
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           CustomTextField(
@@ -43,7 +43,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
               title = value;
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           CustomTextField(
@@ -52,7 +52,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
               onSaved: (value) {
                 subtitle = value;
               }),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           BlocBuilder<AddNoteCubit, AddNoteState>(

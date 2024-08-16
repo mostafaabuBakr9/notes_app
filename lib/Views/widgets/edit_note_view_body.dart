@@ -7,7 +7,7 @@ import 'package:notes/Views/widgets/custom_text_field.dart';
 import 'package:notes/cubits/note_cubit/notes_cubit.dart';
 
 class EditNoteViewBody extends StatefulWidget {
-  EditNoteViewBody({super.key, required this.note});
+  const EditNoteViewBody({super.key, required this.note});
   final NoteModel note;
 
   @override
@@ -24,21 +24,21 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           CustomAppBar(
             title: 'Edit Note',
             icon: Icons.edit,
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Text(
+          const Text(
             'Edit Note',
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           CustomTextField(
@@ -48,7 +48,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
             hint: widget.note.title,
             maxlines: 1,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           CustomTextField(
@@ -58,7 +58,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
             hint: widget.note.subtile,
             maxlines: 5,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           CustomButton(
